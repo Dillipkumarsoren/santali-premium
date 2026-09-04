@@ -1,0 +1,470 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - Santali Premium</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7b1fa2, #512da8);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 18px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            color: #6a1b9a;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f3e5f5;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            border-radius: 50%;
+            background: #7b1fa2;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #444;
+            margin-bottom: 2px;
+        }
+
+        .contact-item a {
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .developer-box {
+            background: #ede7f6;
+            border-left: 5px solid #7b1fa2;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .developer-box p {
+            margin-bottom: 7px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #7b1fa2;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #7b1fa2, #512da8);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.92;
+        }
+
+        .message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            .contact-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Santali Premium</h1>
+    <p>Contact Us</p>
+</header>
+
+
+<div class="container">
+
+    <!-- Introduction -->
+    <div class="card">
+
+        <h2>Get in Touch</h2>
+
+        <p>
+            Thank you for using <strong>Santali Premium</strong>.
+            We value your feedback, suggestions, and questions.
+        </p>
+
+        <p>
+            If you need help with the application, want to report a problem,
+            or have suggestions for improving Santali Premium, please feel
+            free to contact us.
+        </p>
+
+    </div>
+
+
+    <!-- Contact Information -->
+    <div class="card">
+
+        <h2>Contact Information</h2>
+
+        <div class="contact-list">
+
+            <div class="contact-item">
+
+                <div class="icon">✉</div>
+
+                <div>
+                    <strong>Email</strong>
+
+                    <a href="mailto:Dillipsoren640@gmail.com">
+                        Dillipsoren640@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="icon">☎</div>
+
+                <div>
+                    <strong>Mobile</strong>
+
+                    <a href="tel:+919438582096">
+                        +91 9438582096
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Developer Information -->
+    <div class="card">
+
+        <h2>Developer Information</h2>
+
+        <div class="developer-box">
+
+            <p>
+                <strong>App Name:</strong>
+                Santali Premium
+            </p>
+
+            <p>
+                <strong>Developer:</strong>
+                DILLIP KUMAR SOREN
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                Dillipsoren640@gmail.com
+            </p>
+
+            <p>
+                <strong>Mobile:</strong>
+                +91 9438582096
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Contact Form -->
+    <div class="card">
+
+        <h2>Send Us a Message</h2>
+
+        <p>
+            Fill out the form below. Your email application will open
+            with the message ready to send.
+        </p>
+
+        <form id="contactForm">
+
+            <div class="form-group">
+
+                <label for="name">Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">Your Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="subject">Subject</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Enter subject"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                Send Message
+            </button>
+
+            <div class="message" id="successMessage">
+                Your email application is being opened...
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- Support -->
+    <div class="card">
+
+        <h2>App Support</h2>
+
+        <p>
+            For app-related issues, please include as much information
+            as possible, such as the problem you are experiencing,
+            your device model, and the relevant app feature.
+        </p>
+
+        <p>
+            This will help us understand the issue and improve
+            Santali Premium in future updates.
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        <strong>Santali Premium</strong>.
+        All rights reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+    // Contact form
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        const emailBody =
+            "Name: " + name +
+            "\nEmail: " + email +
+            "\n\nMessage:\n" + message;
+
+        const mailtoLink =
+            "mailto:Dillipsoren640@gmail.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(emailBody);
+
+        document.getElementById("successMessage").style.display = "block";
+
+        window.location.href = mailtoLink;
+
+    });
+
+
+    // Automatically update copyright year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```
