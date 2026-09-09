@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <title>Santali Premium APK</title>
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f8fe;
+      color: #0b1e33;
+      line-height: 1.5;
+      padding: 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+    }
+
+    /* ----- HERO: Flash Light style (big, clean, with animation) ----- */
+    .hero {
+      background: linear-gradient(145deg, #0b2b44, #1a4a6e);
+      color: white;
+      padding: 3rem 1.8rem 3.2rem;
+      border-radius: 2.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 25px 45px -12px rgba(8, 30, 50, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* ===== LOGO ANIMATION (crown) ===== */
+    .logo-wrapper {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      position: relative;
+      z-index: 2;
+      animation: floatGlow 3.2s ease-in-out infinite;
+    }
+
+    .logo-wrapper i {
+      font-size: 5.2rem;
+      color: #facc15;
+      filter: drop-shadow(0 8px 20px rgba(250, 204, 21, 0.35));
+      display: inline-block;
+      animation: pulseIcon 2.6s infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-8px) scale(1.02); }
+      100% { transform: translateY(0px) scale(1); }
+    }
+
+    @keyframes pulseIcon {
+      0% { text-shadow: 0 0 8px rgba(250, 204, 21, 0.3); }
+      100% { text-shadow: 0 0 25px rgba(250, 204, 21, 0.7), 0 0 50px rgba(250, 204, 21, 0.2); }
+    }
+
+    /* ----- App name & tagline (exactly like Flash Light style) ----- */
+    .hero .app-name {
+      font-size: 3.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero .app-tagline {
+      font-size: 1.5rem;
+      font-weight: 400;
+      opacity: 0.95;
+      color: #f8e3a0;
+      border-top: 2px solid rgba(255, 215, 0, 0.2);
+      padding-top: 0.6rem;
+      margin-top: 0.2rem;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      letter-spacing: 0.5px;
+    }
+
+    .hero .app-tagline i {
+      font-size: 0.6rem;
+      color: #facc15;
+      vertical-align: middle;
+      margin: 0 0.3rem;
+    }
+
+    /* optional badge (like flash light) */
+    .hero .badge {
+      background: rgba(255, 215, 0, 0.10);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 2rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* ----- section title (bigger) ----- */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 2.8rem 0 1.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #0b2b44;
+    }
+
+    .section-title i {
+      color: #d4a017;
+      font-size: 2.4rem;
+    }
+
+    .section-title .line {
+      flex: 1;
+      height: 3px;
+      background: linear-gradient(90deg, #d1d9e6, transparent);
+    }
+
+    /* ----- features grid (big cards) ----- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem 0.8rem 1.5rem;
+      border-radius: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 20, 40, 0.04);
+      transition: all 0.2s ease;
+      border: 1px solid #eaf0f6;
+    }
+
+    .feature-card i {
+      font-size: 3.2rem;
+      color: #1e4b6e;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: #0b1e33;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #3d556b;
+      padding: 0 0.2rem;
+    }
+
+    /* ----- about box (big & bold) ----- */
+    .about-box, .faq-box {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.5rem 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eaf0f6;
+    }
+
+    .about-box h2, .faq-box h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #0b2b44;
+    }
+
+    .about-box p {
+      font-size: 1.1rem;
+      color: #1f3a54;
+    }
+
+    .about-box ul {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .about-box ul li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    .about-box ul li i {
+      color: #d4a017;
+      width: 1.6rem;
+      font-size: 1.3rem;
+    }
+
+    .dev-info {
+      background: #f0f6fd;
+      border-radius: 2rem;
+      padding: 1.5rem 2rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 6px solid #d4a017;
+      gap: 0.8rem;
+    }
+
+    .dev-info .dev-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .dev-info .dev-details span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+    }
+
+    .dev-info .dev-details i {
+      color: #1e4b6e;
+      width: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0b2b44;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #0b2b44;
+      color: #0b2b44;
+    }
+
+    .btn-outline i {
+      margin-right: 0.4rem;
+    }
+
+    .btn-outline:hover {
+      background: #0b2b44;
+      color: white;
+    }
+
+    .btn-gold {
+      background: #d4a017;
+      border-color: #d4a017;
+      color: #0b1e33;
+    }
+
+    .btn-gold:hover {
+      background: #b8890f;
+      border-color: #b8890f;
+    }
+
+    /* ----- FAQ (big) ----- */
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-item h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0b2b44;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+      color: #2d4a66;
+      margin-top: 0.3rem;
+    }
+
+    .faq-cta {
+      background: #f0f6fd;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 6px solid #d4a017;
+    }
+
+    /* ----- legal grid (big & bold) ----- */
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.2rem;
+      margin: 2.5rem 0;
+    }
+
+    .legal-card {
+      background: white;
+      padding: 1.5rem 0.8rem;
+      border-radius: 2rem;
+      text-align: center;
+      border: 1px solid #e2eaf0;
+      transition: 0.15s;
+      text-decoration: none;
+      color: #0b2b44;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .legal-card i {
+      font-size: 2.4rem;
+      color: #1e4b6e;
+    }
+
+    .legal-card:hover {
+      background: #f5f9ff;
+      border-color: #b6cdde;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 20, 40, 0.06);
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #4b647c;
+      border-top: 1px solid #dce5ed;
+      padding-top: 2rem;
+    }
+
+    .footer i {
+      color: #d4a017;
+    }
+
+    /* ----- responsive: mobile first, big elements ----- */
+    @media (max-width: 640px) {
+      .hero .app-name { font-size: 2.8rem; }
+      .hero .app-tagline { font-size: 1.2rem; }
+      .logo-wrapper i { font-size: 4.5rem; }
+      .section-title { font-size: 1.8rem; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .about-box, .faq-box { padding: 1.8rem 1.2rem; }
+      .dev-info { flex-direction: column; align-items: flex-start; }
+      .dev-info .dev-details { flex-direction: column; gap: 0.5rem; }
+      .legal-grid { grid-template-columns: 1fr 1fr; }
+      .faq-cta { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    }
+
+    @media (max-width: 420px) {
+      .hero .app-name { font-size: 2.2rem; }
+      .hero { padding: 2rem 1rem 2.2rem; }
+      .logo-wrapper i { font-size: 3.8rem; }
+      .features-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+      .feature-card { padding: 1.5rem 0.4rem; }
+      .legal-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO: Flash Light style (app name + tagline + animated logo) -->
+  <div class="hero">
+    <div class="logo-wrapper">
+      <i class="fas fa-crown"></i>
+    </div>
+    <div class="app-name">Santali Premium</div>
+    <div class="app-tagline">
+      <i class="fas fa-circle"></i> Premium APK <i class="fas fa-circle"></i> Ad-free
+    </div>
+    <div class="badge">
+      <i class="fas fa-check-circle" style="margin-right: 0.4rem;"></i> Rich features · Regular updates
+    </div>
+  </div>
+
+  <!-- FEATURES (big) -->
+  <div class="section-title">
+    <i class="fas fa-star"></i> Premium Features
+    <span class="line"></span>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card"><i class="fas fa-bolt"></i><h3>Fast & light</h3><p>Optimized APK, instant launch</p></div>
+    <div class="feature-card"><i class="fas fa-palette"></i><h3>Rich UI</h3><p>Modern Santali-inspired design</p></div>
+    <div class="feature-card"><i class="fas fa-volume-high"></i><h3>Audio & more</h3><p>Premium sounds & content</p></div>
+    <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Ad-free</h3><p>No interruptions, pure experience</p></div>
+    <div class="feature-card"><i class="fas fa-rotate"></i><h3>Regular updates</h3><p>Stay fresh with new features</p></div>
+    <div class="feature-card"><i class="fas fa-download"></i><h3>Easy install</h3><p>One-click APK download</p></div>
+  </div>
+
+  <!-- ABOUT (big) -->
+  <div class="about-box">
+    <h2><i class="fas fa-info-circle" style="color: #d4a017; margin-right: 0.5rem;"></i> About Santali Premium</h2>
+    <p>Santali Premium is a feature-rich APK designed for the Santali-speaking community. Enjoy exclusive content, a clean interface, and a seamless experience — all without ads.</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Premium content for Santali users</li>
+      <li><i class="fas fa-check-circle"></i> No account or login required</li>
+      <li><i class="fas fa-check-circle"></i> Optimized for Android 5.0+</li>
+      <li><i class="fas fa-check-circle"></i> Regular feature enhancements</li>
+    </ul>
+    <div class="dev-info">
+      <div class="dev-details">
+        <span><i class="fas fa-user-astronaut"></i> <strong>DILLIP KUMAR SOREN</strong></span>
+        <span><i class="fas fa-envelope"></i> dillipsoren640@gmail.com</span>
+        <span><i class="fas fa-phone"></i> 9438582096</span>
+      </div>
+      <a href="mailto:dillipsoren640@gmail.com" class="btn btn-outline" style="margin-top: 0.2rem;"><i class="fas fa-paper-plane"></i> Contact Dev</a>
+    </div>
+  </div>
+
+  <!-- FAQ (big) -->
+  <div class="faq-box">
+    <h2><i class="fas fa-circle-question" style="color: #d4a017; margin-right: 0.5rem;"></i> Frequently Asked Questions</h2>
+    <div class="faq-item"><h4>What is Santali Premium APK?</h4><p>It's a premium Android application built for the Santali community, offering exclusive features, rich content, and an ad-free interface.</p></div>
+    <div class="faq-item"><h4>Is registration required?</h4><p>No. You can download and use the APK without any account or login.</p></div>
+    <div class="faq-item"><h4>Which devices are supported?</h4><p>Android 5.0 (Lollipop) and above. Works on most phones and tablets.</p></div>
+    <div class="faq-item"><h4>Is the app really ad-free?</h4><p>Yes! Santali Premium is completely ad-free, so you can enjoy uninterrupted usage.</p></div>
+    <div class="faq-cta">
+      <span><i class="fas fa-headset" style="margin-right: 0.5rem;"></i> Still have questions?</span>
+      <a href="mailto:dillipsoren640@gmail.com" class="btn btn-gold"><i class="fas fa-message"></i> Get in touch</a>
+    </div>
+  </div>
+
+  <!-- LEGAL PAGES (big) - Updated with correct links -->
+  <div class="section-title">
+    <i class="fas fa-scale-balanced"></i> Legal &amp; Info
+    <span class="line"></span>
+  </div>
+  <div class="legal-grid">
+    <a href="https://dilipkumarsoren.github.io/santali-premium/About%20us.html" class="legal-card"><i class="fas fa-users"></i> About Us</a>
+    <a href="https://dilipkumarsoren.github.io/santali-premium/Contact%20us.html" class="legal-card"><i class="fas fa-address-card"></i> Contact Us</a>
+    <a href="https://dilipkumarsoren.github.io/santali-premium/Disclaimer.html" class="legal-card"><i class="fas fa-triangle-exclamation"></i> Disclaimer</a>
+    <a href="https://dilipkumarsoren.github.io/santali-premium/Privacy%20policy.html" class="legal-card"><i class="fas fa-lock"></i> Privacy Policy</a>
+    <a href="https://dilipkumarsoren.github.io/santali-premium/Terms%20and%20conditions.html" class="legal-card"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><i class="fas fa-crown" style="color: #b8860b;"></i> Santali Premium APK · developed with <i class="fas fa-heart" style="color: #c44545;"></i> by DILLIP KUMAR SOREN</p>
+    <p style="margin-top: 0.3rem; font-size: 0.8rem;">&copy; 2026 · All rights reserved · v2.1.0</p>
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>
