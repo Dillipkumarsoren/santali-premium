@@ -1,505 +1,1652 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>Santali Premium APK</title>
-  <!-- Font Awesome 6 (Free) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Santali Premium | Santali Entertainment</title>
+
+<meta name="description"
+content="Santali Premium - Watch Santali Movies, Albums, Comedy and Studio Videos.">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07070d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,7,13,.82);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:20px;
+    font-weight:800;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    box-shadow:0 10px 35px rgba(124,58,237,.35);
+}
+
+.logo-icon i{
+    font-size:19px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.nav-links a{
+    color:#aaaab8;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.play-nav{
+    padding:11px 17px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#7c3aed,#db2777);
+    color:#fff!important;
+    font-weight:700;
+}
+
+.menu{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:760px;
+    padding:145px 0 90px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    left:-250px;
+    top:-250px;
+    background:#7c3aed;
+    filter:blur(190px);
+    opacity:.20;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-200px;
+    bottom:-250px;
+    background:#ec4899;
+    filter:blur(180px);
+    opacity:.14;
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 14px;
+    border-radius:50px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.10);
+    color:#d3d3dc;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.badge i{
+    color:#22c55e;
+    font-size:8px;
+}
+
+.hero h1{
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:23px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#c084fc,#f472b6,#fb7185);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero-text{
+    max-width:620px;
+    color:#9999a8;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 22px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-play{
+    background:#fff;
+    color:#111;
+    box-shadow:0 15px 40px rgba(255,255,255,.10);
+}
+
+.btn-play i{
+    color:#34a853;
+}
+
+.btn-outline{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.13);
+}
+
+/* ================= PHONE ================= */
+
+.phone-area{
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:285px;
+    height:575px;
+    padding:8px;
+    border-radius:43px;
+    background:#171720;
+    border:1px solid #30303a;
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.65),
+        0 0 80px rgba(124,58,237,.20);
+}
+
+.phone-screen{
+    width:100%;
+    height:100%;
+    border-radius:35px;
+    overflow:hidden;
+    background:#0b0b12;
+    position:relative;
+}
+
+.notch{
+    position:absolute;
+    width:100px;
+    height:24px;
+    background:#050509;
+    border-radius:0 0 18px 18px;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+}
+
+.phone-inner{
+    padding:46px 15px 15px;
+}
+
+.app-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.app-logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:800;
+}
+
+.app-logo-icon{
+    width:32px;
+    height:32px;
+    border-radius:9px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+.search-icon{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#22222e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#bbb;
+}
+
+.phone-banner{
+    height:145px;
+    border-radius:18px;
+    padding:17px;
+    display:flex;
+    align-items:flex-end;
+    background:
+        linear-gradient(135deg,
+        rgba(124,58,237,.9),
+        rgba(219,39,119,.65));
+    margin-bottom:19px;
+}
+
+.phone-banner h3{
+    font-size:21px;
+    line-height:1.2;
+}
+
+.phone-section-title{
+    font-size:13px;
+    font-weight:700;
+    color:#ddd;
+    margin-bottom:10px;
+}
+
+.phone-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.phone-card{
+    height:105px;
+    border-radius:13px;
+    background:linear-gradient(145deg,#292936,#15151e);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    color:#bbb;
+    font-size:12px;
+}
+
+.phone-card i{
+    font-size:23px;
+    color:#b084ff;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:#0b0b12;
+    border-top:1px solid rgba(255,255,255,.07);
+    border-bottom:1px solid rgba(255,255,255,.07);
+    padding:40px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:30px;
+    margin-bottom:3px;
+}
+
+.stat p{
+    color:#858592;
+    font-size:13px;
+}
+
+/* ================= COMMON SECTION ================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-head{
+    max-width:700px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.section-label{
+    color:#b084ff;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:800;
+}
+
+.section-head h2{
+    font-size:42px;
+    margin:10px 0 14px;
+}
+
+.section-head p{
+    color:#8f8f9d;
+    line-height:1.7;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category{
+    padding:30px 23px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.07);
+    background:linear-gradient(145deg,#13131d,#0d0d14);
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-7px);
+    border-color:rgba(168,85,247,.45);
+}
+
+.category-icon{
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(124,58,237,.13);
+    margin-bottom:18px;
+}
+
+.category-icon i{
+    font-size:23px;
+    color:#b084ff;
+}
+
+.category h3{
+    margin-bottom:8px;
+}
+
+.category p{
+    color:#858592;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    background:#0b0b12;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:19px;
+}
+
+.feature{
+    padding:29px;
+    border-radius:19px;
+    background:#11111a;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.feature-icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(124,58,237,.13);
+    color:#b084ff;
+    margin-bottom:17px;
+}
+
+.feature h3{
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:#858592;
+    font-size:14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin:10px 0 18px;
+}
+
+.about-text p{
+    color:#9292a0;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-list{
+    display:grid;
+    gap:13px;
+}
+
+.about-list div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#ddd;
+}
+
+.about-list i{
+    color:#a78bfa;
+}
+
+.about-card{
+    padding:42px;
+    border-radius:27px;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(124,58,237,.25),transparent 35%),
+        radial-gradient(circle at 80% 80%,rgba(236,72,153,.16),transparent 35%),
+        #12121c;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.about-card-icon{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    margin-bottom:22px;
+}
+
+.about-card-icon i{
+    font-size:25px;
+}
+
+.about-card h3{
+    font-size:28px;
+    margin-bottom:13px;
+}
+
+.about-card p{
+    color:#90909d;
+    margin-bottom:25px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding-top:30px;
+}
+
+.cta-box{
+    padding:75px 30px;
+    text-align:center;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.08);
+    background:
+        radial-gradient(circle at 15% 20%,rgba(124,58,237,.30),transparent 35%),
+        radial-gradient(circle at 85% 80%,rgba(236,72,153,.22),transparent 35%),
+        #12121d;
+}
+
+.cta-box h2{
+    font-size:44px;
+    margin-bottom:15px;
+}
+
+.cta-box p{
+    max-width:650px;
+    margin:0 auto 27px;
+    color:#90909d;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#0b0b12;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    padding:30px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;
+    background:#11111a;
+    text-align:center;
+}
+
+.contact-icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(124,58,237,.13);
+    color:#b084ff;
+}
+
+.contact-card h3{
+    margin-bottom:8px;
+}
+
+.contact-card p{
+    color:#858592;
+    font-size:14px;
+    word-break:break-word;
+}
+
+/* ================= LEGAL ================= */
+
+.legal-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:13px;
+}
+
+.legal-link{
+    padding:20px 12px;
+    border-radius:14px;
+    background:#101019;
+    border:1px solid rgba(255,255,255,.07);
+    text-align:center;
+    color:#aaaab5;
+    font-size:13px;
+    transition:.3s;
+}
+
+.legal-link i{
+    display:block;
+    font-size:20px;
+    color:#a78bfa;
+    margin-bottom:10px;
+}
+
+.legal-link:hover{
+    color:#fff;
+    transform:translateY(-3px);
+    border-color:#7c3aed;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding:32px 0;
+    color:#777783;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+/* ================= TOP BUTTON ================= */
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#7c3aed;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(124,58,237,.3);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#0b0b12;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        display:none;
+        flex-direction:column;
+        padding:25px;
+        gap:20px;
     }
 
-    body {
-      background: #f4f8fe;
-      color: #0b1e33;
-      line-height: 1.5;
-      padding: 1rem;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    .nav-links.active{
+        display:flex;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      flex: 1;
+    .menu{
+        display:block;
     }
 
-    /* ----- HERO: Flash Light style (big, clean, with animation) ----- */
-    .hero {
-      background: linear-gradient(145deg, #0b2b44, #1a4a6e);
-      color: white;
-      padding: 3rem 1.8rem 3.2rem;
-      border-radius: 2.5rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 25px 45px -12px rgba(8, 30, 50, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      position: relative;
-      overflow: hidden;
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
     }
 
-    /* subtle glow */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      right: -20%;
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
+    .hero-text{
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    /* ===== LOGO ANIMATION (crown) ===== */
-    .logo-wrapper {
-      display: inline-block;
-      margin-bottom: 0.3rem;
-      position: relative;
-      z-index: 2;
-      animation: floatGlow 3.2s ease-in-out infinite;
+    .buttons{
+        justify-content:center;
     }
 
-    .logo-wrapper i {
-      font-size: 5.2rem;
-      color: #facc15;
-      filter: drop-shadow(0 8px 20px rgba(250, 204, 21, 0.35));
-      display: inline-block;
-      animation: pulseIcon 2.6s infinite alternate;
+    .phone-area{
+        margin-top:20px;
     }
 
-    @keyframes floatGlow {
-      0% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-8px) scale(1.02); }
-      100% { transform: translateY(0px) scale(1); }
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    @keyframes pulseIcon {
-      0% { text-shadow: 0 0 8px rgba(250, 204, 21, 0.3); }
-      100% { text-shadow: 0 0 25px rgba(250, 204, 21, 0.7), 0 0 50px rgba(250, 204, 21, 0.2); }
+    .categories{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    /* ----- App name & tagline (exactly like Flash Light style) ----- */
-    .hero .app-name {
-      font-size: 3.6rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 0.1rem;
-      position: relative;
-      z-index: 2;
+    .feature-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .hero .app-tagline {
-      font-size: 1.5rem;
-      font-weight: 400;
-      opacity: 0.95;
-      color: #f8e3a0;
-      border-top: 2px solid rgba(255, 215, 0, 0.2);
-      padding-top: 0.6rem;
-      margin-top: 0.2rem;
-      display: inline-block;
-      position: relative;
-      z-index: 2;
-      letter-spacing: 0.5px;
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero .app-tagline i {
-      font-size: 0.6rem;
-      color: #facc15;
-      vertical-align: middle;
-      margin: 0 0.3rem;
+    .legal-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    /* optional badge (like flash light) */
-    .hero .badge {
-      background: rgba(255, 215, 0, 0.10);
-      backdrop-filter: blur(4px);
-      padding: 0.5rem 2rem;
-      border-radius: 60px;
-      display: inline-block;
-      margin-top: 1.2rem;
-      font-size: 1rem;
-      border: 1px solid rgba(255, 215, 0, 0.15);
-      position: relative;
-      z-index: 2;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:auto;
+        padding-top:120px;
     }
 
-    /* ----- section title (bigger) ----- */
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin: 2.8rem 0 1.8rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: #0b2b44;
+    .hero h1{
+        font-size:45px;
+        letter-spacing:-2px;
     }
 
-    .section-title i {
-      color: #d4a017;
-      font-size: 2.4rem;
+    .hero-text{
+        font-size:16px;
     }
 
-    .section-title .line {
-      flex: 1;
-      height: 3px;
-      background: linear-gradient(90deg, #d1d9e6, transparent);
+    section{
+        padding:75px 0;
     }
 
-    /* ----- features grid (big cards) ----- */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
+    .section-head h2,
+    .about-text h2{
+        font-size:32px;
     }
 
-    .feature-card {
-      background: white;
-      padding: 2rem 0.8rem 1.5rem;
-      border-radius: 2rem;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 20, 40, 0.04);
-      transition: all 0.2s ease;
-      border: 1px solid #eaf0f6;
+    .categories,
+    .feature-grid,
+    .contact-grid,
+    .legal-grid{
+        grid-template-columns:1fr;
     }
 
-    .feature-card i {
-      font-size: 3.2rem;
-      color: #1e4b6e;
-      margin-bottom: 0.5rem;
-      display: block;
+    .cta-box h2{
+        font-size:32px;
     }
 
-    .feature-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.2rem;
-      color: #0b1e33;
+    .footer-grid{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .feature-card p {
-      font-size: 0.9rem;
-      color: #3d556b;
-      padding: 0 0.2rem;
+    .phone{
+        width:265px;
+        height:535px;
     }
+}
 
-    /* ----- about box (big & bold) ----- */
-    .about-box, .faq-box {
-      background: white;
-      border-radius: 2.5rem;
-      padding: 2.5rem 2.2rem;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.03);
-      border: 1px solid #eaf0f6;
-    }
-
-    .about-box h2, .faq-box h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      color: #0b2b44;
-    }
-
-    .about-box p {
-      font-size: 1.1rem;
-      color: #1f3a54;
-    }
-
-    .about-box ul {
-      list-style: none;
-      margin: 1.5rem 0;
-    }
-
-    .about-box ul li {
-      padding: 0.5rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 1.05rem;
-    }
-
-    .about-box ul li i {
-      color: #d4a017;
-      width: 1.6rem;
-      font-size: 1.3rem;
-    }
-
-    .dev-info {
-      background: #f0f6fd;
-      border-radius: 2rem;
-      padding: 1.5rem 2rem;
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      border-left: 6px solid #d4a017;
-      gap: 0.8rem;
-    }
-
-    .dev-info .dev-details {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.95rem;
-    }
-
-    .dev-info .dev-details span {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-weight: 500;
-    }
-
-    .dev-info .dev-details i {
-      color: #1e4b6e;
-      width: 1.2rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #0b2b44;
-      color: white;
-      padding: 0.7rem 2rem;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid transparent;
-      transition: 0.2s;
-      font-size: 1rem;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #0b2b44;
-      color: #0b2b44;
-    }
-
-    .btn-outline i {
-      margin-right: 0.4rem;
-    }
-
-    .btn-outline:hover {
-      background: #0b2b44;
-      color: white;
-    }
-
-    .btn-gold {
-      background: #d4a017;
-      border-color: #d4a017;
-      color: #0b1e33;
-    }
-
-    .btn-gold:hover {
-      background: #b8890f;
-      border-color: #b8890f;
-    }
-
-    /* ----- FAQ (big) ----- */
-    .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 0;
-    }
-
-    .faq-item:last-child {
-      border-bottom: 0;
-    }
-
-    .faq-item h4 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #0b2b44;
-    }
-
-    .faq-item p {
-      font-size: 1rem;
-      color: #2d4a66;
-      margin-top: 0.3rem;
-    }
-
-    .faq-cta {
-      background: #f0f6fd;
-      border-radius: 2rem;
-      padding: 1.8rem 2rem;
-      margin-top: 1.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      border-left: 6px solid #d4a017;
-    }
-
-    /* ----- legal grid (big & bold) ----- */
-    .legal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.2rem;
-      margin: 2.5rem 0;
-    }
-
-    .legal-card {
-      background: white;
-      padding: 1.5rem 0.8rem;
-      border-radius: 2rem;
-      text-align: center;
-      border: 1px solid #e2eaf0;
-      transition: 0.15s;
-      text-decoration: none;
-      color: #0b2b44;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .legal-card i {
-      font-size: 2.4rem;
-      color: #1e4b6e;
-    }
-
-    .legal-card:hover {
-      background: #f5f9ff;
-      border-color: #b6cdde;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 20, 40, 0.06);
-    }
-
-    /* ----- footer ----- */
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #4b647c;
-      border-top: 1px solid #dce5ed;
-      padding-top: 2rem;
-    }
-
-    .footer i {
-      color: #d4a017;
-    }
-
-    /* ----- responsive: mobile first, big elements ----- */
-    @media (max-width: 640px) {
-      .hero .app-name { font-size: 2.8rem; }
-      .hero .app-tagline { font-size: 1.2rem; }
-      .logo-wrapper i { font-size: 4.5rem; }
-      .section-title { font-size: 1.8rem; }
-      .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .about-box, .faq-box { padding: 1.8rem 1.2rem; }
-      .dev-info { flex-direction: column; align-items: flex-start; }
-      .dev-info .dev-details { flex-direction: column; gap: 0.5rem; }
-      .legal-grid { grid-template-columns: 1fr 1fr; }
-      .faq-cta { flex-direction: column; gap: 1rem; align-items: flex-start; }
-    }
-
-    @media (max-width: 420px) {
-      .hero .app-name { font-size: 2.2rem; }
-      .hero { padding: 2rem 1rem 2.2rem; }
-      .logo-wrapper i { font-size: 3.8rem; }
-      .features-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-      .feature-card { padding: 1.5rem 0.4rem; }
-      .legal-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-<div class="container">
 
-  <!-- HERO: Flash Light style (app name + tagline + animated logo) -->
-  <div class="hero">
-    <div class="logo-wrapper">
-      <i class="fas fa-crown"></i>
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+
+    <div class="logo-icon">
+        <i class="fa-solid fa-play"></i>
     </div>
-    <div class="app-name">Santali Premium</div>
-    <div class="app-tagline">
-      <i class="fas fa-circle"></i> Premium APK <i class="fas fa-circle"></i> Ad-free
-    </div>
-    <div class="badge">
-      <i class="fas fa-check-circle" style="margin-right: 0.4rem;"></i> Rich features · Regular updates
-    </div>
-  </div>
 
-  <!-- FEATURES (big) -->
-  <div class="section-title">
-    <i class="fas fa-star"></i> Premium Features
-    <span class="line"></span>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card"><i class="fas fa-bolt"></i><h3>Fast & light</h3><p>Optimized APK, instant launch</p></div>
-    <div class="feature-card"><i class="fas fa-palette"></i><h3>Rich UI</h3><p>Modern Santali-inspired design</p></div>
-    <div class="feature-card"><i class="fas fa-volume-high"></i><h3>Audio & more</h3><p>Premium sounds & content</p></div>
-    <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Ad-free</h3><p>No interruptions, pure experience</p></div>
-    <div class="feature-card"><i class="fas fa-rotate"></i><h3>Regular updates</h3><p>Stay fresh with new features</p></div>
-    <div class="feature-card"><i class="fas fa-download"></i><h3>Easy install</h3><p>One-click APK download</p></div>
-  </div>
+    <span>Santali Premium</span>
 
-  <!-- ABOUT (big) -->
-  <div class="about-box">
-    <h2><i class="fas fa-info-circle" style="color: #d4a017; margin-right: 0.5rem;"></i> About Santali Premium</h2>
-    <p>Santali Premium is a feature-rich APK designed for the Santali-speaking community. Enjoy exclusive content, a clean interface, and a seamless experience — all without ads.</p>
-    <ul>
-      <li><i class="fas fa-check-circle"></i> Premium content for Santali users</li>
-      <li><i class="fas fa-check-circle"></i> No account or login required</li>
-      <li><i class="fas fa-check-circle"></i> Optimized for Android 5.0+</li>
-      <li><i class="fas fa-check-circle"></i> Regular feature enhancements</li>
-    </ul>
-    <div class="dev-info">
-      <div class="dev-details">
-        <span><i class="fas fa-user-astronaut"></i> <strong>DILLIP KUMAR SOREN</strong></span>
-        <span><i class="fas fa-envelope"></i> dillipsoren640@gmail.com</span>
-        <span><i class="fas fa-phone"></i> 9438582096</span>
-      </div>
-      <a href="mailto:dillipsoren640@gmail.com" class="btn btn-outline" style="margin-top: 0.2rem;"><i class="fas fa-paper-plane"></i> Contact Dev</a>
-    </div>
-  </div>
+</a>
 
-  <!-- FAQ (big) -->
-  <div class="faq-box">
-    <h2><i class="fas fa-circle-question" style="color: #d4a017; margin-right: 0.5rem;"></i> Frequently Asked Questions</h2>
-    <div class="faq-item"><h4>What is Santali Premium APK?</h4><p>It's a premium Android application built for the Santali community, offering exclusive features, rich content, and an ad-free interface.</p></div>
-    <div class="faq-item"><h4>Is registration required?</h4><p>No. You can download and use the APK without any account or login.</p></div>
-    <div class="faq-item"><h4>Which devices are supported?</h4><p>Android 5.0 (Lollipop) and above. Works on most phones and tablets.</p></div>
-    <div class="faq-item"><h4>Is the app really ad-free?</h4><p>Yes! Santali Premium is completely ad-free, so you can enjoy uninterrupted usage.</p></div>
-    <div class="faq-cta">
-      <span><i class="fas fa-headset" style="margin-right: 0.5rem;"></i> Still have questions?</span>
-      <a href="mailto:dillipsoren640@gmail.com" class="btn btn-gold"><i class="fas fa-message"></i> Get in touch</a>
-    </div>
-  </div>
+<div class="menu" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</div>
 
-  <!-- LEGAL PAGES (big) - Updated with correct links -->
-  <div class="section-title">
-    <i class="fas fa-scale-balanced"></i> Legal &amp; Info
-    <span class="line"></span>
-  </div>
-  <div class="legal-grid">
-    <a href="https://dilipkumarsoren.github.io/santali-premium/About%20us.html" class="legal-card"><i class="fas fa-users"></i> About Us</a>
-    <a href="https://dilipkumarsoren.github.io/santali-premium/Contact%20us.html" class="legal-card"><i class="fas fa-address-card"></i> Contact Us</a>
-    <a href="https://dilipkumarsoren.github.io/santali-premium/Disclaimer.html" class="legal-card"><i class="fas fa-triangle-exclamation"></i> Disclaimer</a>
-    <a href="https://dilipkumarsoren.github.io/santali-premium/Privacy%20policy.html" class="legal-card"><i class="fas fa-lock"></i> Privacy Policy</a>
-    <a href="https://dilipkumarsoren.github.io/santali-premium/Terms%20and%20conditions.html" class="legal-card"><i class="fas fa-file-contract"></i> Terms &amp; Conditions</a>
-  </div>
+<nav class="nav-links" id="navLinks">
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p><i class="fas fa-crown" style="color: #b8860b;"></i> Santali Premium APK · developed with <i class="fas fa-heart" style="color: #c44545;"></i> by DILLIP KUMAR SOREN</p>
-    <p style="margin-top: 0.3rem; font-size: 0.8rem;">&copy; 2026 · All rights reserved · v2.1.0</p>
-  </div>
+    <a href="#home">
+        <i class="fa-solid fa-house"></i> Home
+    </a>
+
+    <a href="#categories">
+        <i class="fa-solid fa-layer-group"></i> Categories
+    </a>
+
+    <a href="#features">
+        <i class="fa-solid fa-star"></i> Features
+    </a>
+
+    <a href="#about">
+        <i class="fa-solid fa-circle-info"></i> About
+    </a>
+
+    <a href="#contact">
+        <i class="fa-solid fa-envelope"></i> Contact
+    </a>
+
+    <a
+    class="play-nav"
+    href="https://play.google.com/store/apps/details?id=com.niotron.santalipremium&hl=en"
+    target="_blank">
+
+        <i class="fa-brands fa-google-play"></i>
+        Google Play
+
+    </a>
+
+</nav>
 
 </div>
-<!-- end container -->
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+    <div class="badge">
+        <i class="fa-solid fa-circle"></i>
+        Santali Entertainment Platform
+    </div>
+
+    <h1>
+        Santali Culture.<br>
+        <span class="gradient">
+            Unlimited Entertainment.
+        </span>
+    </h1>
+
+    <p class="hero-text">
+        Watch Santali Movies, Albums, Comedy and Studio Videos
+        in one simple entertainment platform. Discover Santali
+        entertainment and stay connected with your culture.
+    </p>
+
+    <div class="buttons">
+
+        <a
+        class="btn btn-play"
+        href="https://play.google.com/store/apps/details?id=com.niotron.santalipremium&hl=en"
+        target="_blank">
+
+            <i class="fa-brands fa-google-play"></i>
+            Get it on Google Play
+
+        </a>
+
+        <a class="btn btn-outline" href="#categories">
+
+            <i class="fa-solid fa-compass"></i>
+            Explore Content
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div class="phone-area">
+
+<div class="phone">
+
+<div class="phone-screen">
+
+<div class="notch"></div>
+
+<div class="phone-inner">
+
+    <div class="app-header">
+
+        <div class="app-logo">
+
+            <div class="app-logo-icon">
+                <i class="fa-solid fa-play"></i>
+            </div>
+
+            Santali Premium
+
+        </div>
+
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </div>
+
+
+    <div class="phone-banner">
+
+        <h3>
+            Santali<br>
+            Entertainment
+        </h3>
+
+    </div>
+
+
+    <div class="phone-section-title">
+        Popular Categories
+    </div>
+
+
+    <div class="phone-cards">
+
+        <div class="phone-card">
+            <i class="fa-solid fa-film"></i>
+            Movies
+        </div>
+
+        <div class="phone-card">
+            <i class="fa-solid fa-music"></i>
+            Albums
+        </div>
+
+        <div class="phone-card">
+            <i class="fa-solid fa-face-laugh"></i>
+            Comedy
+        </div>
+
+        <div class="phone-card">
+            <i class="fa-solid fa-video"></i>
+            Studio
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+    <div class="stat">
+        <h3>1K+</h3>
+        <p>Downloads</p>
+    </div>
+
+    <div class="stat">
+        <h3>4+</h3>
+        <p>Content Categories</p>
+    </div>
+
+    <div class="stat">
+        <h3>100%</h3>
+        <p>Online Streaming</p>
+    </div>
+
+    <div class="stat">
+        <h3>24/7</h3>
+        <p>Entertainment</p>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+<div class="container">
+
+<div class="section-head">
+
+    <span class="section-label">
+        Explore
+    </span>
+
+    <h2>
+        Santali Entertainment in One Place
+    </h2>
+
+    <p>
+        Discover Santali movies, music, comedy and studio
+        videos through Santali Premium.
+    </p>
+
+</div>
+
+
+<div class="categories">
+
+    <div class="category">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-film"></i>
+        </div>
+
+        <h3>Movies</h3>
+
+        <p>
+            Enjoy Santali films, stories and
+            entertainment.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-music"></i>
+        </div>
+
+        <h3>Albums</h3>
+
+        <p>
+            Discover traditional and modern
+            Santali music albums.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-face-laugh"></i>
+        </div>
+
+        <h3>Comedy</h3>
+
+        <p>
+            Enjoy funny Santali comedy and
+            entertainment videos.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-video"></i>
+        </div>
+
+        <h3>Studio Videos</h3>
+
+        <p>
+            Watch Santali studio performances
+            and music videos.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features" id="features">
+
+<div class="container">
+
+<div class="section-head">
+
+    <span class="section-label">
+        Features
+    </span>
+
+    <h2>
+        Made for Santali Entertainment
+    </h2>
+
+    <p>
+        Simple and useful features for enjoying
+        Santali content.
+    </p>
+
+</div>
+
+
+<div class="feature-grid">
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+
+        <h3>Easy Streaming</h3>
+
+        <p>
+            Watch entertainment content online
+            without downloading videos.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <h3>Search Videos</h3>
+
+        <p>
+            Find your favourite Santali videos
+            quickly and easily.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+
+        <h3>Share Content</h3>
+
+        <p>
+            Share interesting videos with
+            friends and family.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+
+        <h3>Regular Updates</h3>
+
+        <p>
+            Discover new entertainment content
+            as it becomes available.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+
+        <h3>Mobile Friendly</h3>
+
+        <p>
+            Enjoy a simple experience designed
+            for mobile users.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <h3>Content Review</h3>
+
+        <p>
+            Submitted video links can be reviewed
+            before approval.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-text">
+
+    <span class="section-label">
+        About Santali Premium
+    </span>
+
+    <h2>
+        Culture Meets Entertainment
+    </h2>
+
+    <p>
+        Santali Premium is an entertainment platform
+        dedicated to Santali movies, music, comedy and
+        studio videos.
+    </p>
+
+    <p>
+        Our goal is to make Santali entertainment easier
+        to discover and help connect audiences with
+        Santali content.
+    </p>
+
+
+    <div class="about-list">
+
+        <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Santali Movies & Albums
+        </div>
+
+        <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Comedy & Studio Videos
+        </div>
+
+        <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Online Video Streaming
+        </div>
+
+        <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Simple User Experience
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="about-card">
+
+    <div class="about-card-icon">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+
+    <h3>
+        Made for Santali Viewers
+    </h3>
+
+    <p>
+        Discover music, movies and entertainment
+        connected with Santali culture—all through
+        one platform.
+    </p>
+
+    <a
+    class="btn btn-play"
+    href="https://play.google.com/store/apps/details?id=com.niotron.santalipremium&hl=en"
+    target="_blank">
+
+        <i class="fa-brands fa-google-play"></i>
+        Download App
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+    <h2>
+        Ready for Santali Entertainment?
+    </h2>
+
+    <p>
+        Download Santali Premium from Google Play
+        and start discovering Santali Movies, Albums,
+        Comedy and Studio Videos.
+    </p>
+
+    <a
+    class="btn btn-play"
+    href="https://play.google.com/store/apps/details?id=com.niotron.santalipremium&hl=en"
+    target="_blank">
+
+        <i class="fa-brands fa-google-play"></i>
+        Get Santali Premium
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-head">
+
+    <span class="section-label">
+        Contact
+    </span>
+
+    <h2>
+        Get in Touch
+    </h2>
+
+    <p>
+        Have a question or want to submit a Santali
+        video? Contact Santali Premium.
+    </p>
+
+</div>
+
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <h3>Email</h3>
+
+        <p>
+            dillipsoren640@gmail.com
+        </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+            +91 9438582096
+        </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            <i class="fa-brands fa-google-play"></i>
+        </div>
+
+        <h3>Google Play</h3>
+
+        <p>
+            Download Santali Premium
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LEGAL ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+    <span class="section-label">
+        Legal & Information
+    </span>
+
+    <h2>
+        Important Links
+    </h2>
+
+</div>
+
+
+<div class="legal-grid">
+
+    <a class="legal-link" href="About_us.html">
+        <i class="fa-solid fa-circle-info"></i>
+        About Us
+    </a>
+
+    <a class="legal-link" href="Contact_us.html">
+        <i class="fa-solid fa-envelope"></i>
+        Contact Us
+    </a>
+
+    <a class="legal-link" href="Privacy_policy.html">
+        <i class="fa-solid fa-user-shield"></i>
+        Privacy Policy
+    </a>
+
+    <a class="legal-link" href="Disclimmer.html">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Disclaimer
+    </a>
+
+    <a class="legal-link" href="Terms_and_conditions.html">
+        <i class="fa-solid fa-file-contract"></i>
+        Terms & Conditions
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-grid">
+
+    <div>
+        © <span id="year"></span> Santali Premium
+    </div>
+
+    <div class="footer-links">
+
+        <a href="Privacy_policy.html">
+            Privacy
+        </a>
+
+        <a href="Terms_and_conditions.html">
+            Terms
+        </a>
+
+        <a href="Disclimmer.html">
+            Disclaimer
+        </a>
+
+        <a href="Contact_us.html">
+            Contact
+        </a>
+
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button
+class="top-btn"
+id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<script>
+
+/* Mobile Menu */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+/* Close Mobile Menu */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
+
+    });
+
+});
+
+
+/* Current Year */
+
+document
+.getElementById("year")
+.textContent = new Date().getFullYear();
+
+
+/* Back To Top */
+
+window.addEventListener("scroll",function(){
+
+    const button =
+    document.getElementById("topBtn");
+
+    if(window.scrollY > 450){
+
+        button.style.display = "block";
+
+    }else{
+
+        button.style.display = "none";
+
+    }
+
+});
+
+</script>
+
 </body>
 </html>
+```
